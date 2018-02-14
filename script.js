@@ -31,6 +31,7 @@ var leftPressed = false;
 
 //панель
 var score = 0;
+var highscore = 0;
 var lives = 10;
 var panelHeight = 20;
 
@@ -43,7 +44,7 @@ function randomColor() { //функция для создания рандомн
 }
 
 var arrayColor = []; //создание массива цветов
-for (var i = 0; i < 120; i++) { //цикл прохождения по массиву
+for (var i = 0; i < brickColumnCount*brickColumnCount; i++) { //цикл прохождения по массиву
     arrayColor[i] = randomColor(); //присваивается значение для массива из вызваной функции
 }
 
@@ -96,7 +97,7 @@ function collisionDetection() { //функция проверки столкно
                         if(document.cookie.split('=')[1] < score) {
                             document.cookie = "highscore=" + score;
                         }
-                        clearInterval(interval);
+                        //clearInterval(interval);
                         alert("YOU WIN, CONGRATULATIONS!\n" + "Your score: " + score + "\nHigh score: " + document.cookie.split('=')[1]);
                         document.location.reload();
                     }
@@ -118,7 +119,7 @@ function touchPaddle() {
                 if(document.cookie.split('=')[1] < score) {
                     document.cookie = "highscore=" + score;
                 }
-                clearInterval(interval);
+                //clearInterval(interval);
                 alert("GAME OVER!\n" + "Your score: " + score + "\nHigh score: " + document.cookie.split('=')[1]);
                 document.location.reload();
             }
@@ -186,49 +187,59 @@ function drawLives() {
 function drawHighScore() {
     ctx.font = "14px Arial";
     highscore = document.cookie.split('=')[1];
+    if(!highscore) {
+        highscore = 0;
+    }
     ctx.fillStyle = "#bf7c31";
     ctx.fillText("High Score: "+highscore, 85, 15);
 }
 
+var fps = 80;
 function draw() { //функция, которая рисует на канвасе
-    ctx.clearRect(0, 0, canvas.width, canvas.height); //очистить канвас
+    setTimeout(function () {
+        requestAnimationFrame(draw);
 
-    drawPanel();
-    drawPaddle();
-    drawScore();
-    drawLives();
-    drawHighScore();
-    drawBricks(); //вызов функции для рисования кирпичей
-    drawBall(); //вызов функции для рисования мяча
-    collisionDetection(); //вызов функции для убирания кирпичей
+        ctx.clearRect(0, 0, canvas.width, canvas.height); //очистить канвас
 
-    if(rightPressed) {
-        if(paddleX <= canvas.width-paddleWidth-paddleStep) {
-            paddleX += paddleStep;
+        drawPanel();
+        drawPaddle();
+        drawScore();
+        drawLives();
+        drawHighScore();
+        drawBricks(); //вызов функции для рисования кирпичей
+        drawBall(); //вызов функции для рисования мяча
+        collisionDetection(); //вызов функции для убирания кирпичей
+
+        if (rightPressed) {
+            if (paddleX <= canvas.width - paddleWidth - paddleStep) {
+                paddleX += paddleStep;
+            }
         }
-    }
-    else if(leftPressed) {
-        if(paddleX >= paddleStep) {
-            paddleX -= paddleStep;
+        else if (leftPressed) {
+            if (paddleX >= paddleStep) {
+                paddleX -= paddleStep;
+            }
         }
-    }
 
-    if (x + dx > canvas.width-ballRadius || x + dx < ballRadius) { // условие проверки правой и левой границы канваса
-        // при координатах x элемента больших ширины канваса без радиуса элемента или при координатах меньше радиуса элемента
-        // направление передвижения по оси x  меняется на противоположное
-        dx = -dx; // изменение направления движения на противоположное
-    }
+        if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) { // условие проверки правой и левой границы канваса
+            // при координатах x элемента больших ширины канваса без радиуса элемента или при координатах меньше радиуса элемента
+            // направление передвижения по оси x  меняется на противоположное
+            dx = -dx; // изменение направления движения на противоположное
+        }
 
-    if (y + dy < ballRadius + panelHeight) { // условие проверки верхней границы канваса
-        // при координатах y элемента больших высоты канваса без радиуса элемента или при координатах меньше радиуса элемента
-        // направление передвижения по оси y  меняется на противоположное
-        dy = -dy; // изменение направления движения на противоположное
-    }
+        if (y + dy < ballRadius + panelHeight) { // условие проверки верхней границы канваса
+            // при координатах y элемента больших высоты канваса без радиуса элемента или при координатах меньше радиуса элемента
+            // направление передвижения по оси y  меняется на противоположное
+            dy = -dy; // изменение направления движения на противоположное
+        }
 
-    touchPaddle();
+        touchPaddle();
 
-    x += dx; // увеличить координату x на величину изменения для передвижения элемента
-    y += dy; // увеличить координату y на величину изменения для передвижения элемента
+        x += dx; // увеличить координату x на величину изменения для передвижения элемента
+        y += dy; // увеличить координату y на величину изменения для передвижения элемента
+
+    }, 1000 / fps);
+    //var requestId = requestAnimationFrame(draw); //установить интервал повторения вызова функции drow
 }
 
 document.addEventListener("keydown", keyDownHandler, false);
@@ -267,6 +278,7 @@ function mouseMoveHandler(e) {
 
     }
 
+
 }
 
-var interval = setInterval(draw, 10); //установить интервал повторения вызова функции drow
+draw();
