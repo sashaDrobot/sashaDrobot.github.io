@@ -2,8 +2,12 @@
 
 const canvas = document.getElementById("myCanvas");
 const ctx = canvas.getContext("2d");
+const time = document.getElementById("time");
+const scorediv = document.getElementById("scorediv");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
+
+let score = 0;
 
 class Figure {
 	constructor() {
@@ -16,7 +20,8 @@ class Figure {
 class Ball extends Figure {
 	constructor() {
 		super();
-		this.radius = App.random(30, 100);
+		this.radius = App.random(30, 90);
+		this.bonus = 1;
 	}
 	
 	draw() {
@@ -30,7 +35,16 @@ class Ball extends Figure {
 	onclick(x, y) {
 		if ((x-this.x)*(x-this.x) + (y-this.y)*(y-this.y) <= this.radius*this.radius) {
 			this.color = `rgb(${App.random(0, 255)},${App.random(0, 255)},${App.random(0, 255)})`;
-			game.figures[game.figures.length-1].increase(1);
+			if (this.radius*this.radius*Math.PI > 10000) {
+				this.bonus = 1;
+			} else if (this.radius*this.radius*Math.PI > 5000) {
+				this.bonus = 2;
+			} else  if (this.radius*this.radius*Math.PI > 3000) {
+				this.bonus = 3;
+			} else if (this.radius*this.radius*Math.PI > 2800) {
+				this.bonus = 4;
+			}
+			game.figures[game.figures.length-1].increase(this.bonus);
 		}
 	}
 };
@@ -40,6 +54,7 @@ class Box extends Figure {
 		super();
 		this.width = App.random(30, 100);
 		this.height = App.random(30, 100);
+		this.bonus = 3;
 	}
 	
 	draw() {
@@ -54,7 +69,18 @@ class Box extends Figure {
 		if(x >= this.x && x <= this.x + this.width && y >= this.y && y <= this.y + this.height) {
 			ctx.clearRect(this.x, this.y, this.width, this.height);
 			this.x += 10;
-            game.figures[game.figures.length-1].increase(3);
+			if(this.height*this.width > 9800) {
+				this.bonus = 1;
+			} else if (this.height*this.width > 5000) {
+				this.bonus = 2;
+			} else if (this.height*this.width > 2500) {
+				this.bonus = 3;
+            } else if (this.height*this.width > 1600) {
+                this.bonus = 4;
+			} else if (this.height*this.width >= 900) {
+                this.bonus = 5;
+            }
+            game.figures[game.figures.length-1].increase(this.bonus);
 		}
 	}
 }
@@ -64,42 +90,48 @@ class Picture extends Figure {
 		super();
 		this.picture = new Image();
 		this.picture.src = `pic${App.random(0,2)}.png`;
+		this.width = App.random(100, 200);
+		this.height = App.random(180, 360);
+		this.bonus = 10;
 	}
 	
 	draw() {
-		ctx.drawImage(this.picture, this.x, this.y, 100, 150);
+		ctx.drawImage(this.picture, this.x, this.y, this.width, this.height);
 	}
 	
 	onclick(x, y) {
-        if(x >= this.x && x <= this.x + 150 && y >= this.y && y <= this.y + 150) {
-            ctx.clearRect(this.x, this.y, 150, 150);
+        if(x >= this.x && x <= this.x + this.width && y >= this.y && y <= this.y + this.height) {
+            ctx.clearRect(this.x, this.y, this.width, this.height);
             this.x = App.random(0, canvas.width);
             this.y = App.random(0, canvas.height);
-            game.figures[game.figures.length-1].increase(10);
+            if(this.height*this.width > 70000) {
+                this.bonus = 10;
+            } else if (this.height*this.width > 50000) {
+                this.bonus = 9;
+            } else if (this.height*this.width > 30000) {
+                this.bonus = 8;
+            } else if (this.height*this.width > 20000) {
+                this.bonus = 6;
+            } else if (this.height*this.width >= 18000) {
+                this.bonus = 5;
+            }
+            game.figures[game.figures.length-1].increase(this.bonus);
         }
 
 	}
 }
 
-
 class Score extends Figure{
 	constructor() {
 		super();
-		this.value = 0;
-		this.step = 1;
 	}
 	
 	increase(step = 1) {
-		this.value += step;
-		ctx.clearRect(0, 0, canvas.width, 50);
+		score += step;
 	}
 	
 	draw() {
-		ctx.beginPath();
-		ctx.font = "24px Times New Roman";
-		ctx.fillStyle = "#fff";
-		ctx.fillText(`Счёт: ${this.value}`, canvas.width/2 - 45, 31);
-		ctx.closePath();
+		scorediv.innerHTML = `Счёт: ${score}`;
 	}
 
 	onclick() {
@@ -107,10 +139,45 @@ class Score extends Figure{
 	}
 };
 
+class Timer {
+    constructor() {
+        this.start = new Date();
+        this.start.setMinutes(0, 0, 0);
+        this.min = 0;
+        this.sec = 39;
+        this.minutes = "00";
+        this.seconds = 39;
+    }
 
-canvas.addEventListener("click", (e) => {
+    getTime() {
+        setInterval( () => {
+        	this.draw();
+        	this.start.setSeconds(--this.sec);
+        	if(this.sec < 0) {
+        		this.sec = 60;
+        		this.start.setMinutes(--this.min);
+			}
+        	this.minutes = this.minutes < 10 ? "0" + this.start.getMinutes() : this.start.getMinutes();
+            this.seconds = this.seconds < 11 ? "0" + this.start.getSeconds() : this.start.getSeconds();
+        	if (this.min < 0) {
+                alert(`Время вышло! Ваш счёт: ${score}`);
+                document.location.reload();
+            }
+		}, 1000);
+    }
+
+    draw() {
+      time.innerHTML = `Осталось времени: ${this.minutes}:${this.seconds}`;
+    }
+
+    onclick() {
+
+	}
+}
+
+canvas.addEventListener("click", (event) => {
 	let rect = canvas.getBoundingClientRect();
-	let x = event.clientX - rect.left; 
+	let x = event.clientX - rect.left;
 	let y = event.clientY - rect.top;
 	for(let i = 0; i < game.figures.length; i++) {
 		game.figures[i].onclick(x, y);
@@ -122,22 +189,16 @@ class App {
         this.figures = [
             new Picture(), new Picture(), new Picture(),
             new Ball(), new Ball(), new Ball(), new Ball(),
-            new Box(), new Box(),  new Box(), new Box(),
-            new Score()];
+            new Box(), new Box(),  new Box(), new Box(), new Box(),
+			new Score()];
 	}
 
     static random(min, max) {
         return min+Math.round(Math.random()*(max-min));
     }
 
-	draw() {
-        for (let i = 0; i < this.figures.length; i++) {
-            this.figures[i].draw();
-        }
-	}
-
 	run() {
-        setInterval(() => {
+		setInterval(() => {
             for (let i = 0; i < this.figures.length; i++) {
                 this.figures[i].draw();
             }}, 10);
@@ -147,3 +208,6 @@ class App {
 
 const game = new App();
 game.run();
+
+let t = new Timer();
+t.getTime();

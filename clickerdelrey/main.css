@@ -9,11 +9,20 @@
 	background: #212121;
 }
 
-#score {
+#time {
 	position: absolute;
-	top: 20px;
-	left: 50px;
-	z-index: 1;
-	font-size: 26pt;
+	top: 10px;
+	left: 10px;
 	color: #fff;
+	font-size: 26px;
+	user-select: none;
+}
+
+#scorediv {
+	position: absolute;
+	top: 10px;
+	left: 48%;
+	color: #fff;
+	font-size: 26px;
+	user-select: none;
 }
