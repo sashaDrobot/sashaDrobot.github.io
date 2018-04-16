@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Quest</title>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script>
+        let config = {
+            apiKey: "AIzaSyDbuW1se3PeFZoCl4dplR2ydKyZPEqUTiU",
+            authDomain: "quest-1c2d5.firebaseapp.com",
+            databaseURL: "https://quest-1c2d5.firebaseio.com",
+            projectId: "quest-1c2d5",
+            storageBucket: "quest-1c2d5.appspot.com",
+            messagingSenderId: "270234211910"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="task">
+        <h1 class="title"></h1>
+        <p class="text"></p>
+        <ul class="links"></ul>
+    </div>
+    <script src="script-obj.js"></script>
+</body>
+</html>

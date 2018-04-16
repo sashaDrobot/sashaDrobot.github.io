@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: #212121;
+    font-family: "Roboto Condensed";
+}
+
+body {
+    text-align: center;
+}
+
+.task h1 {
+    text-transform: uppercase;
+    font-size: 25px;
+    padding: 20px 0 10px 0;
+}
+
+.task p {
+    padding: 10px 0 10px 0;
+}
+
+.task img {
+    width: 780px;
+    height: 480px;
+}
+
+.task ul li {
+    list-style: none;
+    margin: 10px 10px 0 0;
+    display: inline-block;
+}
+
+.task ul li a {
+    text-decoration: none;
+    border: 1px #212121 solid;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    transition: all .5s linear;
+}
+
+.task ul li a:hover {
+    background: #212121;
+    color: aliceblue;
+}
