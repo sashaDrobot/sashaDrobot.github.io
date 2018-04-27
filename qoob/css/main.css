@@ -88,11 +88,36 @@ body .landing .text {
     background-color: white;
     box-shadow: -1px 0 35px rgba(0,0,0,.5);
     height: 100vh;
-    padding-top: 130px;
+    padding-left: 65px;
+}
+#rightside-menu .menu-wrapper{
+    margin-top: 10vh;
+}
+#rightside-menu>div:first-child{
+
 }
 #rightside-menu a{
     font-size: 27px;
     font-family: Acrom, sans-serif;
+    text-transform: uppercase;
+    display: inline-block;
+    left: 165px;
+    margin-bottom: 10vh;
+}
+#rightside-menu a:before{
+    content: '';
+    transition: all .3s linear;
+    display: inline-block;
+    position: absolute;
+    cursor: default;
+    right: 90%;
+    top: 20px;
+    width: 0;
+    height: 1px;
+    background-color: #9095ff;
+}
+#rightside-menu a:hover:before{
+    width: 50px;
 }
 .hidden-menu{
     right: -50% !important;
