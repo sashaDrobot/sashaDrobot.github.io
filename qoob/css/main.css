@@ -1,18 +1,18 @@
 @font-face {
     font-family: Acrom;
-    src: url(../fonts/acrom400.otf);
+    src: url(../srift/acrom400.otf);
 }
 @font-face {
     font-family: Acrom-light;
-    src: url(../fonts/acrom300.otf);
+    src: url(../srift/acrom300.otf);
 }
 @font-face {
     font-family: Acrom-bold;
-    src: url(../fonts/acrom900.otf);
+    src: url(../srift/acrom900.otf);
 }
 @font-face {
     font-family: znikomit;
-    src: url(../fonts/Znikomit.otf);
+    src: url(../srift/Znikomit.otf);
 }
 
 html, body {
