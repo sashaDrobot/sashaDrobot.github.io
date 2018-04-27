@@ -29,6 +29,7 @@ body {
 }
 a,a:hover,a:active,a:focus{
     color: black;
+    text-decoration: none;
 }
 /* ------------- video-background ---------------- */
 body .landing {
@@ -66,18 +67,34 @@ body .landing .text {
     transition: background-color .3s linear;
     text-transform: uppercase;
 }
-#head .navbar-nav .nav-link{
-    color: black;
+#menu-bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: -1;
+    transition: background-color .3s linear;
+    background-color: rgba(255,255,255,.0);
 }
-.white{
-    background-color:rgba(255,255,255,1.0) !important;
-
+.colored-menu-bg{
+    background-color: rgba(255,255,255,.9) !important;
 }
-.black-head{
-    background-color:rgba(0,0,0,1.0) !important;
+#rightside-menu{
+    transition: right .3s linear;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: white;
+    box-shadow: -2px 0 15px black;
+    height: 100vh;
+    padding-top: 130px;
 }
-.black-head .navbar-nav .nav-link{
-    color: white !important;
+#rightside-menu a{
+    font-size: 27px;
+    font-family: Acrom, sans-serif;
+}
+.hidden-menu{
+    right: -50% !important;
 }
 #main-hum{
     top: 68px;
