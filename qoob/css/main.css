@@ -31,13 +31,20 @@ a,a:hover,a:active,a:focus{
     color: black;
     text-decoration: none;
 }
+.h-line{
+    height: 1px;
+    width: 100%;
+    background-color: black;
+}
+
 /* ------------- video-background ---------------- */
 body .landing {
-    height: 100%;
     width: 100%;
     overflow: hidden;
-    min-height: 700px;
-
+    min-height: 900px;
+    height: 100vh;
+    max-height: 1200px;
+    position: relative;
 
 }
 body .landing video {
@@ -171,8 +178,15 @@ body .landing .text {
     height: 100vh;
     width: 30px;
 }
+.languages>div{
+    margin-top: 10px;
+}
 .languages a{
     display: block;
+}
+.languages a:hover{
+    color: white;
+    background-color: black;
 }
 .languages>h5{
   font-family: Acrom,sans-serif;
@@ -193,16 +207,19 @@ body .landing .text {
 .main-header-text{
     font-family: Acrom-bold,sans-serif;
     color: whitesmoke;
-    font-size: 180px;
+    font-size: 96px;
     font-weight: bolder;
     text-transform: uppercase;
     text-shadow: 1px  1px 1px black,-1px -1px 1px black;
-    opacity: .6;
-    letter-spacing: -10px;
+    letter-spacing: -8px;
 }
-.main-header-text{
-
-
+.main-header-text:first-child{
+    margin-left: -250px;
+    margin-top: 100px;
+}
+.main-header-text:last-child{
+    margin-left: 250px;
+    font-family: Acrom-light,sans-serif;
 }
 .svg-clipped {
     -webkit-clip-path: url(#svgPath);
@@ -250,54 +267,85 @@ body .landing .text {
     height: 1000px;
     background-color: white;
 }
+.container-header{
+    font-weight: 600;
+    margin-top: 30vh;
+    margin-bottom: 50px;
+}
 /********************** */
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-
-/* Carousel base class */
-.carousel {
-    margin-bottom: 4rem;
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-    bottom: 3rem;
-    z-index: 10;
-}
-
-/* Declare heights because of positioning of img element */
-.carousel-item {
-    height: 32rem;
-    background-color: #777;
-}
-.carousel-item > img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    height: 32rem;
-}
-
-
-/* MARKETING CONTENT
--------------------------------------------------- */
 
 /* Center align the text within the three columns below the carousel */
-.marketing>.row{
-    padding-top: 50px;
+
+/************* services*******************/
+.services-container{
+    text-transform: uppercase;
+    background: url("../img/back_services.png") no-repeat center/cover;
+    background-attachment: fixed;
+    padding-bottom: 30vh;
 }
-.marketing .col-lg-4 {
-    margin-bottom: 1.5rem;
+
+.services-block{
+    height: 270px;
+    border: 1px solid #b7b7b7;
+    position: relative;
+    background-color: white;
     text-align: center;
+    padding: 0;
 }
-.marketing h2 {
-    font-weight: 400;
+.services-block>.services-front{
+    transition: all .3s linear;
+    top: 110px;
+    position: absolute;
+    padding: 0;
+    z-index: 10;
 }
-.marketing .col-lg-4 p {
-    margin-right: .75rem;
-    margin-left: .75rem;
+.services-block>.branding{
+    top: 120px;
+}
+.services-block>.video-prod{
+    top: 90px;
+}
+.services-block>.services-front>p{
+    opacity: .0;
+    transition: opacity .1s linear;
+    margin-top: 30px;
+}
+.services-back{
+    transition: all .3s linear;
+    opacity: .0;
+    background: #9095ff; /* Old browsers */
+    background: -moz-linear-gradient(top, #9095ff 0%, #420456 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #9095ff 0%,#420456 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #9095ff 0%,#420456 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9095ff', endColorstr='#420456',GradientType=0 );
+    height: 270px;
+}
+.services-back>h1{
+    font-size: 400px;
+    line-height: 300px;
+    font-weight: bolder;
+    color: rgba(255,255,255,.3);
+}
+.services-block:hover .services-front>p{
+    opacity: 1.0;
+}
+.services-block:hover .services-front{
+    top: 35px;
+    color: white;
+}
+.services-block:hover .services-back{
+    opacity: 1;
 }
 
-
+/************* end-services**************/
+/************ adv-container*************/
+.advantages-container{
+    text-transform: uppercase;
+    background: url("../img/back_advant.png") no-repeat center/cover;
+    background-attachment: fixed;
+    padding-bottom: 30vh;
+}
+/************ end-adv*******************/
 /* Featurettes
 ------------------------- */
 
