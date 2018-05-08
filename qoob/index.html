@@ -3,35 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>qoob</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="head">
+        <div class="row contacts-portfolio justify-content-between align-items-end">
+            <div class="col-lg-2 cont">
+                <a href="#">CONTACT</a>
+            </div>
+            <div class="col-lg-2 port text-right">
+                <a href="#">PORTFOLIO</a>
+            </div>
+        </div>
         <a class="navbar-brand" href="#"><img src="img/qoobcolor_horizontal.png"></a>
         <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>-->
-            <div class="col-md-12" id="menu-bg">
-                <div class="col-sm-12 col-xs-12 col-md-5 hidden-menu" id="rightside-menu">
+            <div class="col-lg-12" id="menu-bg">
+                <div class="col-sm-12 col-xs-12 col-lg-5 hidden-menu" id="rightside-menu">
                     <div class="menu-wrapper">
-                        <div class="col-md-6  text-center">
+                        <div class="col-lg-6  text-center">
                             <a href="#">Main</a>
                         </div>
-                        <div class="col-md-6 text-center">
+                        <div class="col-lg-6 text-center">
                             <a href="#">About</a>
                         </div>
-                        <div class="col-md-6 text-center">
+                        <div class="col-lg-6 text-center">
                             <a href="#">Portfolio</a>
                         </div>
-                        <div class="col-md-6 text-center">
+                        <div class="col-lg-6 text-center">
                             <a href="#">Services</a>
                         </div>
-                        <div class="col-md-6 text-center">
+                        <div class="col-lg-6 text-center">
                             <a href="#">Contacts</a>
                         </div>
-                        <div class="col-md-12 text-left">
+                        <div class="col-lg-12 text-left">
                             <canvas id="menu-logo" width="100%" height="82px">
 
                             </canvas>
@@ -53,22 +61,23 @@
         <span class="h-line"></span>
         <div><a href="#"><h5>RU</h5></a></div>
     </div>
+
 </header>
 
-<section class='landing'>
+<section class='landing container-fluid'>
     <video id="bg-video" class="hidden-video" autoplay='true' loop='true' muted='true' poster='' src="video/videoplayback.mp4" type="video/mp4"></video>
     <!--<div class="big-circle">
         <svg id="circle-svg"><circle id="bigCircle" cx="50%" cy="50%" fill="transparent" stroke="#fff" stroke-width="1680"></circle></svg>
     </div>-->
     <div class="container-fluid video-cont">
         <div class="row main">
-            <div class="col-md-2">
+            <div class="col-lg-2">
                 <h5>Beyond the possible</h5>
             </div>
 
         </div>
         <div class="row text-center">
-            <div class="col-md-12">
+            <div class="col-lg-12">
                     <h1 class="main-header-text">
                         Web
                     </h1>
@@ -80,24 +89,17 @@
                 </h2>
             </div>
         </div>
-        <div class="row contacts-portfolio justify-content-between align-items-end">
-            <div class="col-md-2 cont">
-                <a href="#">CONTACT</a>
-            </div>
-            <div class="col-md-2 port text-right">
-                <a href="#">PORTFOLIO</a>
-            </div>
-        </div>
+
     </div>
 </section>
 <div class="container-fluid services-container">
-    <div class="container-fluid">
+
         <div class="row">
-            <div class="col-md-12 text-center">
+            <div class="col-lg-12 text-center">
                 <h3 class="container-header">services</h3>
             </div>
-            <div class="col-md-3 services-block">
-               <div class="col-md-12 services-front text-center">
+            <div class="col-lg-3 services-block">
+               <div class="col-lg-12 services-front text-center">
                    <h3>Website <br> development</h3>
                    <p>
                        lorem ipsum dolor sit emmet
@@ -106,12 +108,12 @@
                        lorem ipsum dolor sit emmet
                    </p>
                </div>
-                <div class="col-md-12 services-back">
+                <div class="col-lg-12 services-back">
                     <h1>W</h1>
                 </div>
             </div>
-            <div class="col-md-3 services-block">
-                <div class="col-md-12 services-front text-center">
+            <div class="col-lg-3 services-block">
+                <div class="col-lg-12 services-front text-center">
                     <h3>Seo <br> promotion</h3>
                     <p>
                         lorem ipsum dolor sit emmet
@@ -120,12 +122,12 @@
                         lorem ipsum dolor sit emmet
                     </p>
                 </div>
-                <div class="col-md-12 services-back">
+                <div class="col-lg-12 services-back">
                     <h1>S</h1>
                 </div>
             </div>
-            <div class="col-md-3 services-block">
-                <div class="col-md-12 services-front text-center branding">
+            <div class="col-lg-3 services-block">
+                <div class="col-lg-12 services-front text-center branding">
                     <h3>Branding</h3>
                     <p>
                         lorem ipsum dolor sit emmet
@@ -134,12 +136,12 @@
                         lorem ipsum dolor sit emmet
                     </p>
                 </div>
-                <div class="col-md-12 services-back">
+                <div class="col-lg-12 services-back">
                     <h1>B</h1>
                 </div>
             </div>
-            <div class="col-md-3 services-block">
-                <div class="col-md-12 services-front video-prod text-center">
+            <div class="col-lg-3 services-block">
+                <div class="col-lg-12 services-front video-prod text-center">
                     <h3>Video <br> production <br> & 3d</h3>
                     <p>
                         lorem ipsum dolor sit emmet
@@ -148,23 +150,23 @@
                         lorem ipsum dolor sit emmet
                     </p>
                 </div>
-                <div class="col-md-12 services-back">
+                <div class="col-lg-12 services-back">
                     <h1>V</h1>
                 </div>
             </div>
         </div>
-    </div>
+
 </div>
 <div class="container-fluid advantages-container">
 
         <div class="row">
-            <div class="col-md-12 text-center">
+            <div class="col-lg-12 text-center">
                 <h3 class="container-header">advantages</h3>
             </div>
 
     </div>
     <div class="row d-flex justify-content-center">
-        <div class="col-md-2 text-center">
+        <div class="col-lg-2 text-center">
             <img src="img/unique_style.png">
             <h3>Unique style</h3>
             <p>
@@ -174,7 +176,7 @@
                 lorem ipsum dolor sit emmet
             </p>
         </div>
-        <div class="col-md-2 text-center">
+        <div class="col-lg-2 text-center">
             <img src="img/qualified.png">
             <h3>Unique style</h3>
             <p>
@@ -184,7 +186,7 @@
                 lorem ipsum dolor sit emmet
             </p>
         </div>
-        <div class="col-md-2 text-center">
+        <div class="col-lg-2 text-center">
             <img src="img/quarant.png">
             <h3>Unique style</h3>
             <p>
@@ -194,7 +196,7 @@
                 lorem ipsum dolor sit emmet
             </p>
         </div>
-        <div class="col-md-2 text-center">
+        <div class="col-lg-2 text-center">
             <img src="img/high.png">
             <h3>Unique style</h3>
             <p>
@@ -204,7 +206,7 @@
                 lorem ipsum dolor sit emmet
             </p>
         </div>
-        <div class="col-md-2 text-center">
+        <div class="col-lg-2 text-center">
             <img src="img/attentiv.png">
             <h3>Unique style</h3>
             <p>
@@ -217,10 +219,10 @@
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 <script src="js/menu.js"></script>
-<script src="js/header.js"></script>
+<!--<<script src="js/header.js"></script>-->
 <!--<script src="js/animated-logo.js"></script>-->
 <script src="js/canvasText.js"></script>
 </body>
