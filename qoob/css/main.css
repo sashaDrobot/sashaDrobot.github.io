@@ -128,16 +128,16 @@ body .landing .text {
 }
 .hidden-menu{
     right: -100% !important;
+
 }
 #main-hum{
     top: 68px;
-    right: 20px;
     width: 50px;
     height: 23px;
     position: absolute;
     cursor: pointer;
-    margin-right: 34px;
     z-index: 1050;
+    right: 0;
 }
 #main-menu span{
     height: 2px;
@@ -160,10 +160,28 @@ body .landing .text {
 
 
 /* ------------- main header --------------------*/
-.navbar-brand{
-    margin-top: 45px;
+
+/*margins for right and left fixed elements*/
+#main-hum,.languages,.port{
+    padding-right: 0;
+    margin-right: 54px;
+}
+.languages{
+    z-index: 10;
+}
+.port,.cont{
+
+}
+#main-hum{
+    z-index: 1310;
+}
+.navbar-brand,.cont{
+    padding-left: 0;
     margin-left: 62px;
 }
+
+
+
 .navbar-brand img{
     width: 104px;
     height: 41px;
@@ -171,10 +189,13 @@ body .landing .text {
 .navbar-collapse>.navbar-nav{
     margin-left: -172px;
 }
+.navbar-brand{
+    margin-top: 45px;
+}
+
 .languages{
     position: fixed;
-    z-index: 1300;
-    right: 10px;
+    right: 0;
     height: 100vh;
     width: 30px;
 }
@@ -291,6 +312,7 @@ body .landing .text {
     background-color: white;
     text-align: center;
     padding: 0;
+    overflow: hidden;
 }
 .services-block>.services-front{
     transition: all .3s linear;
