@@ -397,7 +397,20 @@ body .landing .text {
     background-attachment: fixed;
 }
 
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    background-color: black;
+}
 
+.fa-caret-left,.fa-caret-right{
+    font-size: 70px;
+    color: white;
+    transform: scaleX(1.5);
+    text-shadow:
+            -1px -1px 0 #a7c0ed,
+            1px -1px 0 #a7c0ed,
+            -1px 1px 0 #a7c0ed,
+            1px 1px 0 #a7c0ed;
+}
 /********** end-portfolio **********/
 /* Featurettes
 ------------------------- */
