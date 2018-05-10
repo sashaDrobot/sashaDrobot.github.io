@@ -43,12 +43,12 @@ body .landing {
     overflow: hidden;
     min-height: 900px;
     height: 100vh;
-    max-height: 1200px;
     position: relative;
 
 }
 body .landing video {
-    height: 1000px;
+    min-height: 1000px;
+    height: 100vh;
     width: 100%;
     position: absolute;
     z-index: -2;
@@ -378,15 +378,27 @@ body .landing .text {
 }
 .advantages-container .advantages-elem img{
     margin-bottom: 27px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.advantages-inner:first-child h3{
+    margin-top: 10px;
+    margin-bottom: 18px;
+}
+.advantages-inner:last-child h3{
+    margin-top: 9px;
+    margin-bottom: 17px;
 }
 .advantages-container .advantages-elem h3{
-
+    display: inline-block;
+    width: 130px;
     font-size: 16px;
     font-weight: 600;
 }
 .advantages-container .advantages-elem p{
     font-size: 12px;
-
+    color: #d1d1d1;
 }
     /************ end-adv*******************/
 /********** portfolio **********/
@@ -395,10 +407,27 @@ body .landing .text {
     text-transform: uppercase;
     background: url("../img/back_portfolio.png") no-repeat center/cover;
     background-attachment: fixed;
+    min-height: 900px;
+    height: 100vh;
 }
 
 .carousel-control-next-icon, .carousel-control-prev-icon{
     background-color: black;
+}
+#recipeCarousel{
+    text-align: center;
+}
+.carousel-inner{
+    display: inline-block;
+}
+#recipeCarousel .carousel-item img{
+    height: 285px;
+}
+#recipeCarousel .carousel-item>.col-4:hover .gradient-button{
+    opacity: 1.0;
+}
+#recipeCarousel .carousel-item>.col-4:hover .gradient-button>span{
+    opacity: 1.0;
 }
 
 .fa-caret-left,.fa-caret-right{
@@ -412,6 +441,48 @@ body .landing .text {
             1px 1px 0 #a7c0ed;
 }
 /********** end-portfolio **********/
+
+/********** buttons **************/
+.qoob-button{
+    width: 130px;
+    height: 35px;
+    box-sizing: border-box;
+    background-color: white;
+    text-transform: uppercase;
+    border: 1px solid black;
+    border-radius: 6px;
+    position: relative;
+    display: inline-block;
+
+}
+.gradient-button{
+    border: none;
+    background: linear-gradient(#8f93fc,#430659);
+    transition: all .3s linear;
+    height: 35px;
+    opacity: .0;
+}
+.gradient-button>span{
+    border-radius: inherit;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 31px;
+    background-color: rgba(255,255,255,1.0);
+    width: 126px;
+    height: 31px;
+    display: inline-block;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    transition: all .3s linear;
+    opacity: 0;
+}
+.gradient-button>span:hover{
+    background-color:rgba(255,255,255,.0);
+    color: white;
+}
+/********** end-buttons**********/
+
 /* Featurettes
 ------------------------- */
 
