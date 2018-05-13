@@ -23,7 +23,6 @@ html, body {
 }
 
 body {
-    /*font-family: 'Tauri', Helvetica, Arial, sans-serif;*/
     font-family: Acrom, sans-serif;
     color: black;
 }
@@ -41,8 +40,7 @@ a,a:hover,a:active,a:focus{
 body .landing {
     width: 100%;
     overflow: hidden;
-    min-height: 900px;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
 
 }
@@ -282,6 +280,8 @@ body .landing .text {
     margin-top: 30vh;
     margin-bottom: 50px;
     text-transform: uppercase;
+    font-family: Acrom-bold, sans-serif;
+
 }
 /********************** */
 
@@ -396,8 +396,7 @@ body .landing .text {
     text-transform: uppercase;
     background: url("../img/back_portfolio.png") no-repeat center/cover;
     background-attachment: fixed;
-    min-height: 900px;
-    height: 100vh;
+    min-height: 100vh;
 }
 .portfolio-container .gradient-button,.portfolio-container .gradient-button>span{
     opacity: .0;
@@ -481,8 +480,7 @@ body .landing .text {
 .contacts-container{
     background: url("../img/back_contact.png") no-repeat center/cover;
     background-attachment: fixed;
-    min-height: 900px;
-    height: 100vh;
+    min-height: 100vh;
 }
 .contacts-main-row{
     margin-top: 100px;
@@ -520,31 +518,72 @@ body .landing .text {
 
 
 
-/* Featurettes
-------------------------- */
+/****************** ABOUT US PAGE ***********/
 
-.featurette-divider {
-    margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+.who-we-container,.why-us-container,.contact-us-container{
+    min-height: 100vh;
+    background-color: white;
 }
+.who-we-container{
+    background: url("../img/about us.png") no-repeat top;
+}
+.who-we-container>.container:first-child{
+    height: inherit;
 
-/* Thin out the marketing headings */
-.featurette-heading {
-    font-weight: 300;
-    line-height: 1;
-    letter-spacing: -.05rem;
 }
-#green-wrapper{
-    color: white;
-    font-size: 25px;
-    font-weight: bolder;
-}
-#green-wrapper{
-    padding-top: 30%;
-    padding-bottom: 30%;
-    background: url("../img/green.png") no-repeat center/cover;
-    background-attachment: fixed;
+.who-we-container>.container:first-child>.row{
+
 }
 
+.why-us-container .container-header{
+    margin-top: 15vh;
+}
+
+.why-us-adv-elem{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 25px;
+    width: 215px;
+    display: inline-block;
+
+}
+.why-us-adv-elem>img{
+    display: inline-block;
+}
+.why-us-adv-elem>h4{
+    font-family: Acrom-bold,sans-serif;
+    text-transform: uppercase;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.why-us-adv-elem>p{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.contact-us-container{
+    background: url("../img/contact_us.png") no-repeat center/cover;
+}
+.contact-us-group{
+    margin-top: 65vh;
+}
+.contact-us-group h5{
+    text-transform: uppercase;
+    color: rgba(255,255,255,.8);
+    margin-bottom: 15px;
+}
+.contact-us-group .gradient-button{
+    width: 215px;
+    height: 60px;
+}
+.contact-us-group .gradient-button>span{
+    width: 211px;
+    height: 56px;
+    line-height: 56px;
+    font-family: Acrom-bold, sans-serif;
+    font-size: 23px;
+}
+/************* end ABOUT US PAGE ****************/
 
 
 
