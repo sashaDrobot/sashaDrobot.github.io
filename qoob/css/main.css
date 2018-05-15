@@ -171,16 +171,17 @@ body .landing .text {
     padding-right: 0;
     margin-right: 54px;
 }
-.languages{
+.languages,.society{
     z-index: 10;
 }
-.port,.cont{
 
+.port,.cont{
+    z-index: 11;
 }
 #main-hum{
     z-index: 1310;
 }
-.navbar-brand,.cont{
+.navbar-brand,.cont,.society{
     padding-left: 0;
     margin-left: 62px;
 }
@@ -198,11 +199,35 @@ body .landing .text {
     margin-top: 45px;
 }
 
-.languages{
+.languages,.society{
     position: fixed;
-    right: 0;
     height: 100vh;
     width: 30px;
+}
+.languages{
+}
+.navbar-brand{
+    margin-top: 45px;
+}
+
+.languages,.society{
+    position: fixed;
+    height: 100vh;
+    width: 30px;
+}
+.languages{
+    right: 0;
+}
+.society{
+    left: 0;
+    top: 0;
+}
+.society .fa{
+   color: rgb(199,199,199);
+    transition: color .3s linear;
+}
+.society .fa:hover{
+    color: rgb(0,0,0);
 }
 .languages>div{
     margin-top: 10px;
@@ -342,8 +367,10 @@ body .landing .text {
 }
 .services-back>h1{
     font-size: 400px;
-    line-height: 300px;
+    line-height: 250px;
+    font-family: Acrom-bold, sans-serif;
     font-weight: bolder;
+
     color: rgba(255,255,255,.3);
 }
 .services-block:hover .services-front>p{
