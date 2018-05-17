@@ -290,12 +290,6 @@ body .landing .text {
 }
 
 /* ------------- end of main header --------------------*/
-.black-block{
-    padding-top: 30%;
-    padding-bottom: 30%;
-    background: url("../img/green.png") no-repeat center/cover;
-    background-attachment: fixed;
-}
 .test-block{
     height: 1000px;
     background-color: white;
@@ -315,8 +309,7 @@ body .landing .text {
 /************* services*******************/
 .services-container{
     text-transform: uppercase;
-    background: url("../img/back_services.png") no-repeat center/cover;
-    background-attachment: fixed;
+    background: url("../img/back_services.png") no-repeat fixed center;
     padding-bottom: 30vh;
 }
 
@@ -611,6 +604,35 @@ body .landing .text {
     font-size: 23px;
 }
 /************* end ABOUT US PAGE ****************/
+
+
+
+/**********  PORTFOLIO PAGE ********************/
+.portfolio-header-container{
+    background: url("../img/backphoto.png") no-repeat center/cover;
+    min-height: 440px;
+    color: white;
+}
+.portfolio-header{
+    font-family: Acrom, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 63px;
+}
+.portfolio-main-container p{
+    font-size: 16px;
+}
+.portfolio-main-container-header>p{
+    margin-top: 65px;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+}
+.portfolio-element-text p{
+    margin-top: 65px;
+}
+
+
+/**********  end PORTFOLIO PAGE ********************/
 
 
 
