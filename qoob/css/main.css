@@ -631,8 +631,84 @@ body .landing .text {
     margin-top: 65px;
 }
 
-
 /**********  end PORTFOLIO PAGE ********************/
+
+
+
+/************** feedback form *********************/
+
+.feedback-container{
+    min-height: 100vh;
+}
+.feedback-header{
+    text-transform: uppercase;
+    font-family: Acrom-bold, sans-serif;
+    font-size: 30px;
+    margin-top: 105px;
+    margin-bottom: 25px;
+}
+.form-group{
+    max-width: 555px;
+    min-width: 300px;
+    display: inline-block;
+    width: 100%;
+}
+.feedback-container .form-control{
+    border: 1px solid rgba(255,255,255,.0);
+    height: 55px;
+    transition: border .2s linear;
+}
+.feedback-container .form-group textarea{
+    height: 130px;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.feedback-container .form-group textarea:focus,
+.uneditable-input:focus {
+    border-color: rgba(126, 239, 104, 0.0);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0) inset, 0 0 8px rgba(126, 239, 104, 0.0);
+    outline: 0 none;
+}
+.feedback-container .form-control:hover,.feedback-container .form-control:focus,
+.feedback-container .form-control:active,.feedback-container .form-group textarea:hover,
+.feedback-container .form-group textarea:focus,
+.feedback-container .form-group textarea:active{
+    border-top: 1px solid rgba(144,149,255,1.0);
+    border-left:1px solid rgba(144,149,255,1.0);
+    border-right:1px solid rgba(144,149,255,1.0);
+    border-bottom: 1px solid rgba(67,5,88,1.0);
+    outline: 0 !important;
+    outline-offset: 0 !important;
+}
+textarea{
+    resize: none;
+}
+.feedback-container .gradient-button{
+    height: 45px;
+    width: 157px;
+}
+.feedback-container .gradient-button>span{
+    height: 41px;
+    line-height: 41px;
+    font-size: 15px;
+    width: 153px;
+}
+/************* end feedback form ****************/
+
 
 
 
