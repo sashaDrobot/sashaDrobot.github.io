@@ -613,12 +613,18 @@ body .landing .text {
 
 
 /**********  PORTFOLIO PAGE ********************/
-.portfolio-header-container{
-    background: url("../img/backphoto.png") no-repeat center/cover;
+.header-container{
+
     min-height: 440px;
     color: white;
 }
-.portfolio-header{
+.portfolio-header-container{
+    background: url("../img/backphoto.png") no-repeat center/cover;
+}
+.services-header-container{
+    background: url("../img/back1.png") no-repeat center/cover;
+}
+.portfolio-header,.services-header{
     font-family: Acrom, sans-serif;
     font-weight: 400;
     text-transform: uppercase;
@@ -713,6 +719,137 @@ textarea{
     width: 153px;
 }
 /************* end feedback form ****************/
+
+
+/*************** services page **************/
+.serv-description p{
+    font-family: Acrom, sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 70px;
+    margin-bottom: 100px;
+}
+.serv-way-wrapper{
+    position: relative;
+    height: 185px;
+    overflow: hidden;
+}
+.serv-way-element{
+    height: 100%;
+    padding: 0;
+}
+
+.serv-way-element h3{
+    font-family: Acrom-bold, sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    display: inline-block;
+    margin: 0 auto;
+    color: rgb(0,0,0);
+    transition: color .3s ease-in-out,text-shadow .3s linear;
+    text-shadow: 1px 1px rgba(0,0,0,.0), -1px 1px rgba(0,0,0,.0),
+    1px -1px rgba(0,0,0,.0), -1px -1px rgba(0,0,0,.0);
+    z-index: 2;
+    cursor: default;
+}
+.back-letter{
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: default;
+    padding: 0;
+}
+.back-letter h1{
+    font-family: Acrom-bold, sans-serif;
+    font-size: 250px;
+    line-height: 250px;
+    display: inline-block;
+    color: rgba(245,245,245,1.0);
+    transition: color .2s linear;
+}
+.serv-way-wrapper:hover .back-letter h1{
+    color: rgba(79,29,115,1.0);
+}
+.serv-way-wrapper:hover .serv-way-element h3{
+    color: rgb(255,255,255);
+    text-shadow: 1px 1px rgba(0,0,0,1.0), -1px 1px rgba(0,0,0,1.0),
+    1px -1px rgba(0,0,0,1.0), -1px -1px rgba(0,0,0,1.0);
+}
+.serv-way-wrapper:hover .serv-number h2{
+    color: rgba(206,206,206,1.0);
+}
+.serv-number{
+    position: absolute;
+    bottom: -6px;
+    right: 0;
+    padding: 0;
+}
+.serv-number h2{
+    cursor: default;
+    font-family: Acrom-light,sans-serif;
+    font-size: 48px;
+    color: rgba(245,245,245,1.0);
+    transition: color .2s linear;
+    line-height: 48px;
+    margin-bottom: 0;
+}
+.services-group-container-header h2{
+    font-family: Acrom-bold, sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+.services-group-elem-wrapper{
+    height: 175px;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(144,149,255,0.0);
+    border-left:1px solid rgba(144,149,255,0.0);
+    border-right:1px solid rgba(144,149,255,0.0);
+    border-bottom: 1px solid rgba(67,5,88,0.0);
+    transition: border .2s linear;
+    padding: 0;
+}
+.services-group-elem-header-wrapper{
+    display: inline-block;
+    width: 100%;
+    height: 94px;
+    background-color: rgba(245,245,245,1.0);
+    transition: background-color .2s linear;
+}
+.services-group-elem-header{
+    font-family: Acrom, sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+.services-group-elem-description{
+    margin-left: 25px;
+    margin-right: 25px;
+    font-family: Acrom, sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    color: rgba(0,0,0,.0);
+    transition: color .2s linear;
+}
+.services-group-elem-wrapper:hover{
+    border-top: 1px solid rgba(144,149,255,1.0);
+    border-left:1px solid rgba(144,149,255,1.0);
+    border-right:1px solid rgba(144,149,255,1.0);
+    border-bottom: 1px solid rgba(67,5,88,1.0);
+}
+.services-group-elem-wrapper:hover .services-group-elem-header-wrapper{
+    background-color: rgba(245,245,245,.0);
+}
+.services-group-elem-wrapper:hover .services-group-elem-description{
+    color: rgba(0,0,0,1.0);
+}
+/*************** end services page ***********/
 
 
 
