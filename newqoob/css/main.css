@@ -954,6 +954,21 @@ textarea{
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
+@media screen and (max-width: 992px){
+    .contacts-inform{
+        text-align: center;
+    }
+    .contacts-inform ul{
+        padding-left: 0;
+    }
+    .advantages-container .advantages-inner h3,.why-us-adv-elem h4{
+        font-size: 20px;
+    }
+    .advantages-container .advantages-inner p,.why-us-adv-elem p{
+        font-size: 18px;
+    }
+}
+
 
 @media (min-width: 40em) {
     /* Bump up size of carousel content */
