@@ -955,6 +955,10 @@ textarea{
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 @media screen and (max-width: 992px){
+    .portfolio-main-container,.contacts-container,.who-we-container,.why-us-container,.contact-us-container,.feedback-container{
+        min-height: 200px;
+        height: auto;
+    }
     .contacts-inform{
         text-align: center;
     }
