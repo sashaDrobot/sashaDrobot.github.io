@@ -504,7 +504,6 @@ body .landing .text {
     position: relative;
 }
 .portfolio-preview img{
-    max-height: 380px;
     width: 100%;
 }
 .portfolio-preview .portfolio-preview-colored-wrapper{
@@ -1009,6 +1008,15 @@ textarea{
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 @media screen and (max-width: 992px){
+    #head{
+        background-color: white;
+        height: 152px;
+        border-bottom:1px solid black;
+    }
+    .navbar-brand{
+        margin: 0;
+        display: inline-block;
+    }
     .navbar-brand img{
         width: 208px;
         height: auto;
@@ -1046,6 +1054,9 @@ textarea{
     }
     #rightside-menu a{
         font-size: 5em;
+    }
+    .main h5{
+        display: none;
     }
     .main-header-text,.main-header-text:first-child,.main-header-text:last-child{
         font-family: Acrom-bold, sans-serif;
