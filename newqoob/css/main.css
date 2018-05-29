@@ -35,6 +35,46 @@ a,a:hover,a:active,a:focus{
     width: 100%;
     background-color: black;
 }
+.loaderArea {
+    background: black;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right:0;
+    bottom:0;
+    z-index: 100000;
+}
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+
+.loader>div{
+    position: relative;
+    color: white;
+}
+.loader>div>span{
+    display: inline-block;
+    font-size: 9vw;
+    font-family: Acrom-light, sans-serif;
+    letter-spacing: -1vw;
+    animation: zoom 1s ease-in-out;
+}
+@keyframes zoom {
+    from{
+      color: black;
+
+    }
+    to{
+        color: white;
+
+    }
+}
 
 /* ------------- video-background ---------------- */
 body .landing {
@@ -152,6 +192,7 @@ body .landing .text {
     position: absolute;
     top: 0;
     right: 0px;
+    transition: all .3s;
 }
 #main-menu span:nth-child(2){
     top: 8px;
@@ -160,6 +201,17 @@ body .landing .text {
 #main-menu span:last-child{
     top: 16px;
     width: 28px;
+}
+.cross-menu #main-hum span:first-child{
+    opacity: .0;
+}
+.cross-menu #main-hum span:nth-child(2){
+    transform: rotate(45deg);
+    width: 28px;
+}
+.cross-menu #main-hum span:last-child{
+    top: 8px;
+    transform: rotate(-45deg);
 }
 /* ------------- end of main-menu  ---------------- */
 
@@ -289,6 +341,7 @@ body .landing .text {
     background-color: white;
 }
 .container-header{
+    font-size: 40px;
     font-weight: 600;
     margin-top: 30vh;
     margin-bottom: 50px;
@@ -603,6 +656,7 @@ body .landing .text {
     background-attachment: fixed;
     min-height: 100vh;
 }
+
 .contacts-main-row{
     margin-top: 100px;
 }
@@ -955,6 +1009,62 @@ textarea{
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 @media screen and (max-width: 992px){
+    .navbar-brand img{
+        width: 208px;
+        height: auto;
+    }
+    #main-menu span{
+        height: 4px;
+        width: 64px;
+        background-color: black;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0px;
+    }
+    #main-menu span:nth-child(2){
+        top: 16px;
+        width: 48px;
+    }
+    #main-menu span:last-child{
+        top: 32px;
+        width: 56px;
+    }
+    .cross-menu #main-hum span:nth-child(2){
+        width: 56px;
+    }
+    .cross-menu #main-hum span:last-child{
+        top: 16px;
+    }
+
+
+    .society,.languages,.contacts-portfolio{
+        display: none !important;
+    }
+    .menu-wrapper{
+        text-align: center;
+    }
+    #rightside-menu a{
+        font-size: 5em;
+    }
+    .main-header-text,.main-header-text:first-child,.main-header-text:last-child{
+        font-family: Acrom-bold, sans-serif;
+
+        margin: 0;
+    }
+    .advantages-container .advantages-elem img,.why-us-adv-elem>img{
+        width: 40%;
+        height: auto;
+    }
+    .advantages-container .advantages-elem p{
+        color: #777;
+    }
+    .services-block h3{
+        font-size: 2.5em;
+    }
+    .services-block>.services-front p{
+        font-size: 1.3em;
+    }
     .portfolio-main-container,.contacts-container,.who-we-container,.why-us-container,.contact-us-container,.feedback-container{
         min-height: 200px;
         height: auto;
@@ -966,10 +1076,21 @@ textarea{
         padding-left: 0;
     }
     .advantages-container .advantages-inner h3,.why-us-adv-elem h4{
-        font-size: 20px;
+        font-size: 2.5em;
+        width: auto;
     }
-    .advantages-container .advantages-inner p,.why-us-adv-elem p{
-        font-size: 18px;
+
+    .contacts-main-row h1,.container-header{
+        font-size: 4.5em;
+    }
+    .contacts-main-row h5, .contacts-main-row li, .advantages-container .advantages-inner p,.why-us-adv-elem p{
+        font-size: 2.5em;
+    }
+    .copyright-qoob h6{
+        font-size: 2.5em;
+    }
+    .why-us-adv-elem {
+        width: auto;
     }
 }
 

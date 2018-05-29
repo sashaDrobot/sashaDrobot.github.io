@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+<div class="loaderArea">
+    <div class="loader">
+        <div>
+            <span class="loader-q-letter">q</span>
+            <span class="loader-o-letters">oo</span>
+            <span class="loader-b-letter">b</span>
+        </div>
+    </div>
+</div>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="head">
 
@@ -219,29 +228,37 @@
         </div>
     </div>
 </div>
-<div class="container portfolio-main-container d-flex align-items-center">
-    <div class="row portfolio-element">
-        <div class="col-md-6 portfolio-preview">
-            <img class="img-fluid" src="img/prom.png">
-            <div class="portfolio-preview-colored-wrapper text-center d-flex flex-column  justify-content-center align-items-center">
-                <h2 class="align-self-center">Prominvest plastic</h2>
-                <hr>
-                <a href="portfolio.html" class="qoob-button portfolio-button align-self-center draw">
-                    More
-                </a>
-            </div>
+<div class="container portfolio-main-container ">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h3 class="container-header">portfolio</h3>
         </div>
-        <div class="col-md-6 portfolio-preview">
-            <img class="img-fluid" src="img/tiers.png">
-            <div class="portfolio-preview-colored-wrapper text-center d-flex flex-column  justify-content-center align-items-center">
-                <h2 class="align-self-center">Tiers & disks</h2>
-                <hr>
-                <a href="portfolio.html" class="qoob-button portfolio-button align-self-center draw">
-                    More
-                </a>
+    </div>
+    <div class="d-flex align-items-center">
+        <div class="row portfolio-element">
+            <div class="col-lg-6 portfolio-preview">
+                <img class="img-fluid" src="img/prom.png">
+                <div class="portfolio-preview-colored-wrapper text-center d-flex flex-column  justify-content-center align-items-center">
+                    <h2 class="align-self-center">Prominvest plastic</h2>
+                    <hr>
+                    <a href="portfolio.html" class="qoob-button portfolio-button align-self-center draw">
+                        More
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 portfolio-preview">
+                <img class="img-fluid" src="img/tiers.png">
+                <div class="portfolio-preview-colored-wrapper text-center d-flex flex-column  justify-content-center align-items-center">
+                    <h2 class="align-self-center">Tiers & disks</h2>
+                    <hr>
+                    <a href="portfolio.html" class="qoob-button portfolio-button align-self-center draw">
+                        More
+                    </a>
+                </div>
             </div>
         </div>
     </div>
+
 
 </div>
 <div class="container-fluid contacts-container ">
@@ -283,14 +300,26 @@
                 <h6>qoob 2018</h6>
             </div>
         </div>
-    </div>
-
+    </div> 
 </div>
 <div class="contacts-portfolio">
     <a class="cont" href="contacts.html">CONTACT</a>
     <a class="port" href="portfolio.html">PORTFOLIO</a>
 </div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script>
+    $(window).on('load', function () {
+        $preloader = $('.loaderArea'),
+            $loader = $preloader.find('.loader');
+        setTimeout(function() {
+            $loader.fadeOut();
+            $preloader.delay(350).fadeOut('slow');;
+        }, 1000);
+    });
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
