@@ -107,6 +107,10 @@
     background-color: rgb(246, 248, 250);
 }
 
+.main-panel .navbar {
+    height: 70px;
+}
+
 .main-panel .navbar .navbar-brand {
     font-size: 18px;
     color: #495053;
