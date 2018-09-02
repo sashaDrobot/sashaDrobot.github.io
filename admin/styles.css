@@ -109,8 +109,10 @@
     transition: all .33s cubic-bezier(.685,.0473,.346,1);
 }
 
-.main-panel .navbar #toggler:target {
-    background: #4a4949;
+.main-panel .navbar #toggler {
+    box-shadow: none;
+    outline: none;
+    border: none;
 }
 
 .main-panel .navbar {
@@ -272,6 +274,9 @@
     }
     .open-sidebar .main-panel {
         transform: translate3d(-260px,0,0) !important;
+    }
+    .main-panel .navbar {
+        padding-right: 1.5rem!important;
     }
     .sidebar {
         right: 0;
