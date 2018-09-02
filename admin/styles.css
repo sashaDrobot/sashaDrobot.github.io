@@ -43,6 +43,7 @@
     overflow: hidden;
     flex-wrap: nowrap;
     flex-direction: column;
+    margin-bottom: 65px;
 }
 
 .sidebar .nav .nav-item a {
@@ -106,6 +107,10 @@
     min-height: 100%;
     background-color: rgb(246, 248, 250);
     transition: all .33s cubic-bezier(.685,.0473,.346,1);
+}
+
+.main-panel .navbar #toggler:target {
+    background: #4a4949;
 }
 
 .main-panel .navbar {
