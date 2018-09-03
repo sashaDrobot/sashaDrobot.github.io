@@ -21,4 +21,9 @@ const vm = new Vue({
 $('#toggler').on('click', function () {
     $('.wrapper').toggleClass('open-sidebar');
     $(this).toggleClass('collapsed');
+    $('.sidebar .nav .nav-link, .sidebar .nav .profile').click(function () {
+        $('.wrapper').removeClass('open-sidebar');
+        $('#toggler').addClass('collapsed');
+    });
 });
+
