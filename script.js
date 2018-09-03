@@ -1,10 +1,48 @@
 
+//-------------------------------XML--------------------------------//
+function loadXMLDoc(dname)
+{
+  xhttp=new XMLHttpRequest();
+  xhttp.open("GET",dname,false);
+  try {xhttp.responseType="msxml-document"} catch(err) {console.log(err);} // Helping IE
+  xhttp.send("");
+  return xhttp;
+}
+var x=loadXMLDoc("config.xml");
+var xml=x.responseXML;
+path="/configuration/config/value";
+// code for IE
+if (window.ActiveXObject || xhttp.responseType=="msxml-document")
+{
+	xml.setProperty("SelectionLanguage","XPath");
+	nodes=xml.selectNodes(path);
+
+	brickRowCount=nodes[0].childNodes[0].nodeValue;
+	brickColumnCount=nodes[1].childNodes[0].nodeValue;
+	lives=nodes[2].childNodes[0].nodeValue;
+	fps=nodes[3].childNodes[0].nodeValue;
+}
+// code for Chrome, Firefox, Opera, etc.
+else if (document.implementation && document.implementation.createDocument)
+{
+	var nodes=xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null);
+	var result=nodes.iterateNext();
+	
+	brickRowCount=result.childNodes[0].nodeValue;
+	result=nodes.iterateNext();
+	brickColumnCount=result.childNodes[0].nodeValue;
+	result=nodes.iterateNext();
+	lives=result.childNodes[0].nodeValue;
+	result=nodes.iterateNext();
+	fps=result.childNodes[0].nodeValue;
+}
+
 var canvas = document.getElementById("myCanvas"); // создать переменную для работы с канвасом и получить его из dom по id
 var ctx = canvas.getContext("2d"); // получить двумерный контекст
 
 //кирпичи
-var brickRowCount = 10;  //количество строк для кирпичей
-var brickColumnCount = 12; //количество столбцов для кирпичей
+//var brickRowCount = 10;  //количество строк для кирпичей
+//var brickColumnCount = 12; //количество столбцов для кирпичей
 var brickWidth = 75; //ширина кирпича
 var brickHeight = 20; //высота кирпича
 var brickPadding = 5; //отступ между кирпичами
@@ -32,8 +70,10 @@ var leftPressed = false;
 //панель
 var score = 0;
 var highscore = 0;
-var lives = 10;
+//var lives = 10;
 var panelHeight = 20;
+
+//var fps = 80;
 
 function randomColor() { //функция для создания рандомного цвета
     var color = "#"; //переменная цвета с первоначальным значением
@@ -194,7 +234,6 @@ function drawHighScore() {
     ctx.fillText("High Score: "+highscore, 85, 15);
 }
 
-var fps = 80;
 function draw() { //функция, которая рисует на канвасе
     setTimeout(function () {
         requestAnimationFrame(draw);
