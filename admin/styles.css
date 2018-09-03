@@ -118,7 +118,8 @@ body {
 }
 
 .sidebar .nav .nav-item:hover, .sidebar .nav .nav-item .active, .main-panel .navbar .dropdown-menu .dropdown-item:hover {
-    background-color: rgba(25, 145, 235, 0.09);
+    background-color: #fafbfc;
+    color: #2196f3;
 }
 
 .sidebar .nav .nav-item .nav-link i {
@@ -281,6 +282,7 @@ body {
 
 .main-panel .info-card .card {
     width: 100%;
+    padding: 20px 0;
 }
 
 .main-panel .info-card .info-card-content i {
