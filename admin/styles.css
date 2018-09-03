@@ -106,13 +106,53 @@
     width: calc(100% - 260px);
     min-height: 100%;
     background-color: rgb(246, 248, 250);
-    transition: all .33s cubic-bezier(.685,.0473,.346,1);
+    transition: all .33s cubic-bezier(.685, .0473, .346, 1);
 }
 
 .main-panel .navbar #toggler {
     box-shadow: none;
     outline: none;
     border: none;
+}
+
+.icon-bar {
+    width: 22px;
+    height: 2px;
+    background-color: #B6B6B6;
+    display: block;
+    transition: all 0.2s;
+    margin-top: 4px
+}
+
+.navbar-toggler {
+    border: none;
+    background: transparent !important;
+}
+
+.navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar {
+    opacity: 0;
+}
+
+.navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+}
+
+.navbar-toggler.collapsed .top-bar {
+    transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0);
 }
 
 .main-panel .navbar {
@@ -265,33 +305,38 @@
     padding: 20px 1rem;
     border-top: 1px solid #f3f3f3;
     font-size: 0.8rem;
-    font-family: Poppins,sans-serif;
+    font-family: Poppins, sans-serif;
 }
 
 @media (max-width: 991px) {
     .open-sidebar .sidebar {
-        transform: translate3d(0,0,0) !important;
+        transform: translate3d(0, 0, 0) !important;
     }
+
     .open-sidebar .main-panel {
-        transform: translate3d(-260px,0,0) !important;
+        transform: translate3d(-260px, 0, 0) !important;
     }
+
     .main-panel .navbar {
-        padding-right: 1.5rem!important;
+        padding-right: 1.5rem !important;
     }
+
     .sidebar {
         right: 0;
         left: auto;
-        transform: translate3d(260px,0,0);
+        transform: translate3d(260px, 0, 0);
         z-index: 1032;
         visibility: visible;
         overflow-y: visible;
         padding-right: 0;
         padding-left: 0;
-        transition: all .33s cubic-bezier(.685,.0473,.346,1);
+        transition: all .33s cubic-bezier(.685, .0473, .346, 1);
     }
+
     .main-panel {
         width: 100%;
     }
+
     .footer span {
         text-align: center;
         float: none !important;

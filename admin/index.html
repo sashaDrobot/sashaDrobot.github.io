@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="wrapper">
+<div id="app" class="wrapper">
     <div class="sidebar">
         <div class="logo">
             <a class="navbar-brand" href="#">
@@ -63,8 +63,11 @@
     <div class="main-panel">
         <nav class="navbar navbar-expand-lg navbar-light pr-0 pl-4">
             <a class="navbar-brand" href="#">Dashboard</a>
-            <button id="toggler" class="navbar-toggler" type="button">
-                <span class="navbar-toggler-icon"></span>
+            <button id="toggler" class="navbar-toggler collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <!--<span class="navbar-toggler-icon"></span>-->
+                <span class="icon-bar top-bar"></span>
+                <span class="icon-bar middle-bar"></span>
+                <span class="icon-bar bottom-bar"></span>
             </button>
             <div class="collapse navbar-collapse mr-3">
                 <ul class="navbar-nav ml-auto">
@@ -95,6 +98,7 @@
             </div>
         </nav>
         <div class="content-wrapper">
+
             <section class="dashboard">
                 <div class="row">
                     <div class="info-card bottom-margin col-xl-3 col-lg-3 col-md-3 col-sm-6 d-flex align-items-stretch justify-content-stretch">
@@ -174,7 +178,7 @@
                                             <td>Dispatched Dispatched Dispatched</td>
                                             <td>20.08.2018</td>
                                             <td><a href="#"
-                                                   class="btn btn-outline-success btn-sm">View Order</a>
+                                                   class="btn btn-outline-success btn-sm">View order</a>
                                             </td>
                                             <td><a href="#"
                                                    class="btn btn-outline-danger btn-sm">Cancel</a></td>
@@ -185,7 +189,7 @@
                                             <td>Dispatched Dispatched Dispatched</td>
                                             <td>20.08.2018</td>
                                             <td><a href="#"
-                                                   class="btn btn-outline-success btn-sm">View Order</a>
+                                                   class="btn btn-outline-success btn-sm">View order</a>
                                             </td>
                                             <td><a href="#"
                                                    class="btn btn-outline-danger btn-sm">Cancel</a></td>
@@ -196,7 +200,7 @@
                                             <td>Dispatched Dispatched Dispatched</td>
                                             <td>20.08.2018</td>
                                             <td><a href="#"
-                                                   class="btn btn-outline-success btn-sm">View Order</a>
+                                                   class="btn btn-outline-success btn-sm">View order</a>
                                             </td>
                                             <td><a href="#"
                                                    class="btn btn-outline-danger btn-sm">Cancel</a></td>
@@ -207,7 +211,7 @@
                                             <td>Dispatched Dispatched Dispatched</td>
                                             <td>20.08.2018</td>
                                             <td><a href="#"
-                                                   class="btn btn-outline-success btn-sm">View Order</a>
+                                                   class="btn btn-outline-success btn-sm">View order</a>
                                             </td>
                                             <td><a href="#"
                                                    class="btn btn-outline-danger btn-sm">Cancel</a></td>
@@ -220,6 +224,7 @@
                     </div>
                 </div>
             </section>
+
             <footer class="footer">
                 <div class="container-fluid clearfix">
                     <span class="float-none float-sm-right d-block mt-1 mt-sm-0">
