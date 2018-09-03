@@ -63,8 +63,8 @@
     border-radius: 100%;
 }
 
-.sidebar .nav .nav-profile .profile-name {
-    cursor: default;
+.sidebar .nav .nav-profile .profile {
+    text-decoration: none !important;
 }
 
 .sidebar .nav .nav-profile .profile-name p {
