@@ -22,20 +22,19 @@
         </div>
         <ul class="nav">
             <li class="nav-profile py-4">
-                <a href="viewUser.html" class="profile">
+                <router-link to="/view-profile" class="profile">
                     <div class="profile-image">
-                        <img src="avatar.jpg"
-                             alt="profile">
+                        <img src="default.png" alt="profile">
                     </div>
                     <div class="profile-name text-center mt-3">
                         <p class="name">Alexander Drobot</p>
                         <p class="designation">Backend developer</p>
                         <span class="badge badge-primary mx-auto mt-3">Online</span>
                     </div>
-                </a>
+                </router-link>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="#"><i class="fas fa-desktop"></i>Dashboard</a>
+                <router-link to="/" class="nav-link active"><i class="fas fa-desktop"></i>Dashboard</router-link>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#"><i class="fas fa-users"></i>Team</a>
@@ -63,7 +62,8 @@
     <div class="main-panel">
         <nav class="navbar navbar-expand-lg navbar-light pr-0 pl-4">
             <a class="navbar-brand" href="#">Dashboard</a>
-            <button id="toggler" class="navbar-toggler collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+            <button id="toggler" class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                    aria-expanded="false" aria-label="Toggle navigation">
                 <span class="icon-bar top-bar"></span>
                 <span class="icon-bar middle-bar"></span>
                 <span class="icon-bar bottom-bar"></span>
@@ -88,7 +88,7 @@
                             <i class="fas fa-user"></i>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="viewUser.html">View profile</a>
+                            <router-link to="/view-profile" class="dropdown-item">View profile</router-link>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Logout</a>
                         </div>
@@ -97,133 +97,7 @@
             </div>
         </nav>
         <div class="content-wrapper">
-
-            <section class="dashboard">
-                <div class="row">
-                    <div class="info-card bottom-margin col-xl-3 col-lg-3 col-md-3 col-sm-6 d-flex align-items-stretch justify-content-stretch">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="info-card-content d-flex justify-content-between align-items-center">
-                                    <i class="fas fa-users users-icon"></i>
-                                    <div class="info-card-text">
-                                        <h6 class="mb-0">Team</h6>
-                                        <p class="mb-0">15</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="info-card bottom-margin col-xl-3 col-lg-3 col-md-3 col-sm-6 d-flex align-items-stretch justify-content-stretch">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="info-card-content d-flex justify-content-between align-items-center">
-                                    <i class="fas fa-file-alt orders-icon"></i>
-                                    <div class="info-card-text">
-                                        <h6 class="mb-0">Orders</h6>
-                                        <p class="mb-0">215</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="info-card bottom-margin col-xl-3 col-lg-3 col-md-3 col-sm-6 d-flex align-items-stretch justify-content-stretch">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="info-card-content d-flex justify-content-between align-items-center">
-                                    <i class="fas fa-tasks tasks-icon"></i>
-                                    <div class="info-card-text">
-                                        <h6 class="mb-0">Tasks</h6>
-                                        <p class="mb-0">10</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="info-card bottom-margin col-xl-3 col-lg-3 col-md-3 col-sm-6 d-flex align-items-stretch justify-content-stretch">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="info-card-content d-flex justify-content-between align-items-center">
-                                    <i class="fas fa-shopping-bag products-icon"></i>
-                                    <div class="info-card-text">
-                                        <h6 class="mb-0">Products</h6>
-                                        <p class="mb-0">315</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row bottom-margin">
-                    <div class="col-12 padding-x">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="card-title mb-4">Orders</div>
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Email</th>
-                                            <th>Message</th>
-                                            <th>Date</th>
-                                            <th></th>
-                                            <th></th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>Alexander</td>
-                                            <td>alex.drobot22@gmail.com</td>
-                                            <td>Dispatched Dispatched Dispatched</td>
-                                            <td>20.08.2018</td>
-                                            <td><a href="#"
-                                                   class="btn btn-outline-success btn-sm">View order</a>
-                                            </td>
-                                            <td><a href="#"
-                                                   class="btn btn-outline-danger btn-sm">Cancel</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Alexander</td>
-                                            <td>alex.drobot22@gmail.com</td>
-                                            <td>Dispatched Dispatched Dispatched</td>
-                                            <td>20.08.2018</td>
-                                            <td><a href="#"
-                                                   class="btn btn-outline-success btn-sm">View order</a>
-                                            </td>
-                                            <td><a href="#"
-                                                   class="btn btn-outline-danger btn-sm">Cancel</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Alexander</td>
-                                            <td>alex.drobot22@gmail.com</td>
-                                            <td>Dispatched Dispatched Dispatched</td>
-                                            <td>20.08.2018</td>
-                                            <td><a href="#"
-                                                   class="btn btn-outline-success btn-sm">View order</a>
-                                            </td>
-                                            <td><a href="#"
-                                                   class="btn btn-outline-danger btn-sm">Cancel</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Alexander</td>
-                                            <td>alex.drobot22@gmail.com</td>
-                                            <td>Dispatched Dispatched Dispatched</td>
-                                            <td>20.08.2018</td>
-                                            <td><a href="#"
-                                                   class="btn btn-outline-success btn-sm">View order</a>
-                                            </td>
-                                            <td><a href="#"
-                                                   class="btn btn-outline-danger btn-sm">Cancel</a></td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
+            <router-view></router-view>
             <footer class="footer">
                 <div class="container-fluid clearfix">
                     <span class="float-none float-sm-right d-block mt-1 mt-sm-0">
@@ -236,7 +110,248 @@
     </div>
 </div>
 
+<template id="dashboard">
+    <section class="dashboard">
+        <div class="row">
+            <div class="info-card bottom-margin col-xl-3 col-lg-3 col-md-3 col-sm-6 d-flex align-items-stretch justify-content-stretch">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="info-card-content d-flex justify-content-between align-items-center">
+                            <i class="fas fa-users users-icon"></i>
+                            <div class="info-card-text">
+                                <h6 class="mb-0">Team</h6>
+                                <p class="mb-0">15</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-card bottom-margin col-xl-3 col-lg-3 col-md-3 col-sm-6 d-flex align-items-stretch justify-content-stretch">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="info-card-content d-flex justify-content-between align-items-center">
+                            <i class="fas fa-file-alt orders-icon"></i>
+                            <div class="info-card-text">
+                                <h6 class="mb-0">Orders</h6>
+                                <p class="mb-0">215</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-card bottom-margin col-xl-3 col-lg-3 col-md-3 col-sm-6 d-flex align-items-stretch justify-content-stretch">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="info-card-content d-flex justify-content-between align-items-center">
+                            <i class="fas fa-tasks tasks-icon"></i>
+                            <div class="info-card-text">
+                                <h6 class="mb-0">Tasks</h6>
+                                <p class="mb-0">10</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-card bottom-margin col-xl-3 col-lg-3 col-md-3 col-sm-6 d-flex align-items-stretch justify-content-stretch">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="info-card-content d-flex justify-content-between align-items-center">
+                            <i class="fas fa-shopping-bag products-icon"></i>
+                            <div class="info-card-text">
+                                <h6 class="mb-0">Products</h6>
+                                <p class="mb-0">315</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row bottom-margin">
+            <div class="col-12 padding-x">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title mb-4">Orders</div>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Message</th>
+                                    <th>Date</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Alexander</td>
+                                    <td>alex.drobot22@gmail.com</td>
+                                    <td>Dispatched Dispatched Dispatched</td>
+                                    <td>20.08.2018</td>
+                                    <td><a href="#"
+                                           class="btn btn-outline-success btn-sm">View order</a>
+                                    </td>
+                                    <td><a href="#"
+                                           class="btn btn-outline-danger btn-sm">Cancel</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Alexander</td>
+                                    <td>alex.drobot22@gmail.com</td>
+                                    <td>Dispatched Dispatched Dispatched</td>
+                                    <td>20.08.2018</td>
+                                    <td><a href="#"
+                                           class="btn btn-outline-success btn-sm">View order</a>
+                                    </td>
+                                    <td><a href="#"
+                                           class="btn btn-outline-danger btn-sm">Cancel</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Alexander</td>
+                                    <td>alex.drobot22@gmail.com</td>
+                                    <td>Dispatched Dispatched Dispatched</td>
+                                    <td>20.08.2018</td>
+                                    <td><a href="#"
+                                           class="btn btn-outline-success btn-sm">View order</a>
+                                    </td>
+                                    <td><a href="#"
+                                           class="btn btn-outline-danger btn-sm">Cancel</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Alexander</td>
+                                    <td>alex.drobot22@gmail.com</td>
+                                    <td>Dispatched Dispatched Dispatched</td>
+                                    <td>20.08.2018</td>
+                                    <td><a href="#"
+                                           class="btn btn-outline-success btn-sm">View order</a>
+                                    </td>
+                                    <td><a href="#"
+                                           class="btn btn-outline-danger btn-sm">Cancel</a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="view-profile">
+    <section class="view-user">
+        <div class="row mt-4 bottom-margin">
+            <div class="col-xl-8 padding-x edit-user order-2 order-sm-2 order-xl-1">
+                <div class="card bottom-margin">
+                    <div class="card-body">
+                        <div class="edit-user-header">
+                            <h6 class="card-title">Edit Profile</h6>
+                            <p class="card-text">Complete your profile</p>
+                        </div>
+                        <div class="edit-user-form mt-4">
+                            <form id="editUser">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="firstName">First Name</label>
+                                        <input type="text" class="form-control" id="firstName" name="firstname"
+                                               placeholder="First name">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="lastName">Last Name</label>
+                                        <input type="text" class="form-control" id="lastName" name="lastname"
+                                               placeholder="Last name">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control" id="email" name="email"
+                                               placeholder="Email">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="phone">Phone</label>
+                                        <input type="tel" class="form-control" id="phone" name="phone"
+                                               placeholder="Phone">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">Address</label>
+                                    <input type="text" class="form-control" id="address" name="address"
+                                           placeholder="Kharkiv Main St">
+                                </div>
+                                <div class="form-group">
+                                    <label for="userAbout">About Me</label>
+                                    <textarea class="form-control" id="userAbout" name="about"
+                                              placeholder="Write a little about yourself..." rows="5"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary d-flex ml-auto my-3">Update
+                                    Profile
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="card change-password">
+                    <div class="card-body">
+                        <div class="change-password-header">
+                            <h6 class="card-title">Change Password</h6>
+                        </div>
+                        <div class="change-password-form mt-4">
+                            <form id="changePassword">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="oldPassword">Old Password</label>
+                                        <input type="password" class="form-control" id="oldPassword"
+                                               name="oldpassword" placeholder="Old password">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="newPassword">New Password</label>
+                                        <input type="password" class="form-control" id="newPassword"
+                                               name="newpassword" placeholder="New password">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary d-flex ml-auto">Change
+                                        password
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 padding-x order-1 order-sm-1 order-xl-2">
+                <div class="card view-user bottom-margin">
+                    <div class="card-avatar">
+                        <img src="default.png" alt="Avatar">
+                    </div>
+                    <div class="card-body text-center">
+                        <h6 class="position">Backend developer</h6>
+                        <h4 class="card-title">Alexander Drobot</h4>
+                        <div class="card-description">
+                            <p class="about">Albus silvas ducunt ad tumultumque. Itineris tramitem alter
+                                equiso est. Eheu, hydra! Vae, cotta! Voxs ridetis, tanquam bi-color abaculus.
+                                Domuss
+                                sunt lumens de primus clabulare.</p>
+                            <p>Email: alex.drobot22@gmail.com</p>
+                            <p>Phone: +38 (066) 28 38 970</p>
+                            <p>Address: Kharkiv, Pobeda str. 35</p>
+                        </div>
+                        <form>
+                            <div class="input-group">
+                                <div class="custom-file justify-content-center">
+                                    <input type="file" class="custom-file-input d-none" id="uploadAvatar">
+                                    <label class="btn btn-primary photo" for="uploadAvatar">Choose photo</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/2.2.1/vue-router.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
