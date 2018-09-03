@@ -7,10 +7,14 @@ const ViewUser = Vue.component('view-profile', {
 });
 
 const router = new VueRouter({
+    // mode: 'history', !#
     routes: [
-        { path: '/', component: Dashboard },
+        { path: '/dashboard', component: Dashboard },
         { path: '/view-profile', component: ViewUser },
-    ]
+
+        { path: '*', component: Dashboard },
+    ],
+    linkActiveClass: "active"
 });
 
 const vm = new Vue({
