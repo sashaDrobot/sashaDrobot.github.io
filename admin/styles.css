@@ -422,10 +422,6 @@ body {
     letter-spacing: 0;
 }
 
-.main-panel .content-wrapper .edit-user {
-    margin-bottom: 80px;
-}
-
 .main-panel .content-wrapper .edit-user .edit-user-header .card-title, .main-panel .content-wrapper .edit-user .change-password-header .card-title {
     margin-bottom: 5px;
     font-family: "Poppins", sans-serif;
