@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Admin Panel</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app" class="wrapper">
+    <div class="sidebar">
+        <div class="logo">
+            <a class="navbar-brand" href="#">
+                <i class="fab fa-laravel px-2"></i><strong>team</strong>Projects
+            </a>
+        </div>
+        <ul class="nav">
+            <li class="nav-profile py-4">
+                <a href="#" class="profile">
+                    <div class="profile-image">
+                        <img src="avatar.jpg" alt="profile">
+                    </div>
+                    <div class="profile-name text-center mt-3">
+                        <p class="name">Alexander Drobot</p>
+                        <p class="designation">Backend developer</p>
+                        <span class="badge badge-primary mx-auto mt-3">Online</span>
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html"><i class="fas fa-desktop"></i>Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-users"></i>Team</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-comments"></i>Chat</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="far fa-clipboard" style="padding-left: 3px"></i>Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-tasks"></i>Tasks</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-file-alt"></i>Orders</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-trash-alt"></i>Trash</a>
+            </li>
+            <li class="nav-item d-lg-none d-md-block">
+                <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i>Logout</a>
+            </li>
+        </ul>
+    </div>
+    <div class="main-panel">
+        <nav class="navbar navbar-expand-lg navbar-light pr-0 pl-4">
+            <a class="navbar-brand" href="#">Projects</a>
+            <button id="toggler" class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar top-bar"></span>
+                <span class="icon-bar middle-bar"></span>
+                <span class="icon-bar bottom-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse mr-3">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-envelope"></i>
+                            <span class="count">7</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-bell"></i>
+                            <span class="count">3</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-user"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">View profile</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="content-wrapper">
+            <section class="projects">
+                <div class="row bottom-margin">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body my-5">
+                                <div class="projects-cards-wrapper">
+                                    <div class="project-card-wrapper">
+                                        <div class="project-badge"></div>
+                                        <a href="#" class="project-link">
+                                            <div class="project-card">
+                                                <div class="project-card-header">
+                                                    <h6 class="project-card-title">Station Hostel</h6>
+                                                </div>
+                                                <div class="project-card-content">
+                                                    <p>Albus silvas ducunt ad tumultumque. Itineris tramitem alter
+                                                        equiso
+                                                        est. Eheu, hydra! Vae, cotta! Voxs ridetis, tanquam bi-color
+                                                        abaculus.</p>
+                                                </div>
+                                                <div class="project-card-footer d-flex align-items-center justify-content-between">
+                                                    <p>21.09.2018</p>
+                                                    <p>01.10.2018</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="project-card-wrapper project-card-wrapper-reverse">
+                                        <div class="project-badge"></div>
+                                        <a href="#" class="project-link">
+                                            <div class="project-card">
+                                                <div class="project-card-header">
+                                                    <h6 class="project-card-title">Yablochkin</h6>
+                                                </div>
+                                                <div class="project-card-content">
+                                                    <p>Albus silvas ducunt ad tumultumque. Itineris tramitem alter
+                                                        equiso
+                                                        est. Eheu, hydra! Vae, cotta! Voxs ridetis, tanquam bi-color
+                                                        abaculus.</p>
+                                                </div>
+                                                <div class="project-card-footer d-flex align-items-center justify-content-between">
+                                                    <p>21.09.2018</p>
+                                                    <p>01.10.2018</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="projects-cards-wrapper">
+                                    <div class="project-card-wrapper">
+                                        <div class="project-badge"></div>
+                                        <a href="#" class="project-link">
+                                            <div class="project-card">
+                                                <div class="project-card-header">
+                                                    <h6 class="project-card-title">Prominvest</h6>
+                                                </div>
+                                                <div class="project-card-content">
+                                                    <p>Albus silvas ducunt ad tumultumque. Itineris tramitem alter
+                                                        equiso
+                                                        est. Eheu, hydra! Vae, cotta! Voxs ridetis, tanquam bi-color
+                                                        abaculus.</p>
+                                                </div>
+                                                <div class="project-card-footer d-flex align-items-center justify-content-between">
+                                                    <p>21.09.2018</p>
+                                                    <p>01.10.2018</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="project-card-wrapper project-card-wrapper-reverse">
+                                        <div class="project-badge"></div>
+                                        <a href="#" class="project-link">
+                                            <div class="project-card">
+                                                <div class="project-card-header">
+                                                    <h6 class="project-card-title">Qoob Studio</h6>
+                                                </div>
+                                                <div class="project-card-content">
+                                                    <p>Albus silvas ducunt ad tumultumque. Itineris tramitem alter
+                                                        equiso
+                                                        est. Eheu, hydra! Vae, cotta! Voxs ridetis, tanquam bi-color
+                                                        abaculus.</p>
+                                                </div>
+                                                <div class="project-card-footer d-flex align-items-center justify-content-between">
+                                                    <p>21.09.2018</p>
+                                                    <p>01.10.2018</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="footer">
+                <div class="container-fluid clearfix">
+                    <span class="float-none float-sm-right d-block mt-1 mt-sm-0">
+                       © 2018 Alexander Drobot, made with <i class="fas fa-heart"></i>
+                        <i class="mdi mdi-heart text-danger"></i>
+                    </span>
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -31,10 +31,6 @@ select:-webkit-autofill:focus {
     color: #495057 !important;
 }
 
-input:-webkit-autofill {
-
-}
-
 .wrapper {
     height: 100vh;
 }
@@ -208,6 +204,7 @@ input:-webkit-autofill {
 
 .main-panel .navbar .navbar-brand {
     font-size: 18px;
+    font-weight: 300;
     color: #495053;
 }
 
@@ -356,6 +353,30 @@ input:-webkit-autofill {
     font-family: Poppins, sans-serif;
 }
 
+@media (max-width: 768px) {
+    .main-panel .content-wrapper .projects-cards-wrapper:before {
+        content: unset;
+    }
+
+    .main-panel .content-wrapper .projects-cards-wrapper .project-card-wrapper,
+    .main-panel .content-wrapper .projects-cards-wrapper .project-card-wrapper-reverse {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .main-panel .content-wrapper .projects-cards-wrapper .project-card-wrapper .project-badge {
+        display: none;
+    }
+
+    .main-panel .content-wrapper .projects-cards-wrapper .project-card-wrapper a .project-card {
+        width: 100% !important;
+    }
+
+    .main-panel .content-wrapper .projects-cards-wrapper .project-card-wrapper .project-card:after {
+        content: unset;
+    }
+}
+
 @media (max-width: 991px) {
     .open-sidebar .sidebar {
         transform: translate3d(0, 0, 0) !important;
@@ -388,6 +409,29 @@ input:-webkit-autofill {
     .footer span {
         text-align: center;
         float: none !important;
+    }
+
+    .main-panel .content-wrapper .projects-cards-wrapper .project-card-wrapper .project-card {
+        width: 50% !important;
+        margin-left: 0 !important;
+    }
+
+    .main-panel .content-wrapper .projects-cards-wrapper .project-card-wrapper-reverse .project-card {
+        width: 50% !important;
+        margin-right: 0 !important;
+        margin-left: auto !important;
+    }
+}
+
+@media (max-width: 1366px) {
+    .main-panel .content-wrapper .projects-cards-wrapper .project-card-wrapper .project-card {
+        width: 45%;
+        margin-left: 5%;
+    }
+
+    .main-panel .content-wrapper .projects-cards-wrapper .project-card-wrapper-reverse .project-card {
+        margin-right: 5%;
+        margin-left: auto;
     }
 }
 
@@ -499,3 +543,214 @@ input:-webkit-autofill {
 }
 
 /* ----- VIEW USER ----- */
+
+/* ----- LOGIN ----- */
+
+.container-scroller {
+    overflow: hidden;
+}
+
+.full-page-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.login-content-wrapper {
+    background: url(login.jpg);
+    background-size: cover;
+    padding: 1.5rem 1.7rem;
+    flex-grow: 1;
+}
+
+.full-page-wrapper .login-form-wrapper {
+    box-shadow: rgba(8, 143, 220, 0.07) 0 -25px 37.7px 11.3px;
+    background: rgb(255, 255, 255);
+    padding: 40px 40px 10px;
+    border-radius: 4px;
+}
+
+.full-page-wrapper .login-form-wrapper label {
+    font-family: Poppins, sans-serif;
+    font-size: 0.875rem;
+    line-height: 1;
+    vertical-align: top;
+}
+
+.full-page-wrapper .login-form-wrapper input {
+    border: 1px solid #e5e5e5;
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.75rem;
+    padding: 1.32rem .75rem;
+    line-height: 14px;
+    font-weight: 300;
+    box-shadow: none;
+}
+
+.full-page-wrapper .login-form-wrapper .input-group-append span {
+    border-radius: 0 6px 6px 0;
+    border-left: none;
+    border-color: #e5e5e5;
+    background: transparent;
+    color: #b6b6b6;
+}
+
+.full-page-wrapper .login-form-wrapper .submit-btn {
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    padding: 12px 8px;
+    font-weight: 600;
+    background-color: #2196f3;
+    border-color: #2196f3;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    line-height: 13px
+}
+
+.full-page-wrapper .login-form-wrapper .forgot-password, .full-page-wrapper .login-form-wrapper .custom-checkbox label {
+    text-decoration: none;
+    font-size: 12px;
+    color: #212529;
+    user-select: none;
+    cursor: pointer;
+    font-family: Poppins, sans-serif;
+}
+
+.custom-checkbox .custom-control-label::before,
+.custom-checkbox .custom-control-label::after,
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after,
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+    box-shadow: none !important;
+}
+
+/* ----- LOGIN ----- */
+
+/* ----- PROJECTS ----- */
+
+.content-wrapper .projects-cards-wrapper {
+    list-style: none;
+    padding: 0;
+    position: relative;
+}
+
+.content-wrapper .projects-cards-wrapper:before {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 3px;
+    background-color: #e6eef2;
+    left: 50%;
+    margin-left: -1.5px;
+}
+
+.content-wrapper .projects-cards-wrapper .project-card-wrapper {
+    display: block;
+    padding-bottom: 20px;
+    position: relative;
+    width: 100%;
+    padding-right: 90px;
+}
+
+.content-wrapper .projects-cards-wrapper .project-card-wrapper-reverse {
+    padding-right: 0;
+    padding-left: 90px;
+}
+
+.content-wrapper .projects-cards-wrapper .project-card-wrapper:before {
+    content: " ";
+    display: table;
+}
+
+.content-wrapper .projects-cards-wrapper .project-card-wrapper .project-link {
+    text-decoration: none !important;
+    color: #4a4949;
+    font-family: "Poppins", sans-serif;
+}
+
+.content-wrapper .projects-cards-wrapper .project-card-wrapper .project-badge {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 16px;
+    left: calc(50% - 7px);
+    z-index: 100;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    background: #007bff;
+}
+
+.content-wrapper .projects-cards-wrapper .project-card-wrapper .project-card {
+    padding: 20px;
+    position: relative;
+    background: #ffffff;
+    border-radius: 6px;
+    -webkit-box-shadow: 1px 2px 35px 0 rgba(1, 1, 1, 0.1);
+    box-shadow: 1px 2px 35px 0 rgba(1, 1, 1, 0.1);
+    width: 35%;
+    margin-left: 15%;
+}
+
+.content-wrapper .projects-cards-wrapper .project-card-wrapper-reverse .project-card {
+    margin-left: auto;
+    margin-right: 15%;
+}
+
+.content-wrapper .projects-cards-wrapper .project-card-wrapper .project-card:after {
+    position: absolute;
+    top: 27px;
+    right: -14px;
+    display: inline-block;
+    border-top: 14px solid transparent;
+    border-left: 14px solid #ffffff;
+    border-right: 0 solid #ffffff;
+    border-bottom: 14px solid transparent;
+    content: " ";
+}
+
+.content-wrapper .projects-cards-wrapper .project-card-wrapper-reverse .project-card:after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto;
+}
+
+.content-wrapper .projects-cards-wrapper .project-card-wrapper .project-card:before {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    content: "";
+    left: 0;
+    right: 0;
+    background: #007bff;
+}
+
+.project-card-wrapper .project-card .project-card-header .project-card-title {
+    margin-top: 0;
+    color: #424964;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+}
+
+.project-card-wrapper .project-card .project-card-content {
+    font-size: 0.875rem;
+}
+
+.project-card-wrapper .project-card .project-card-footer p {
+    font-size: 0.6875rem;
+    font-weight: 700;
+}
+
+
+
+/* ----- PROJECTS ----- */
+

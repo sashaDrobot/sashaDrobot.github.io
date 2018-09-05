@@ -22,7 +22,7 @@
         </div>
         <ul class="nav">
             <li class="nav-profile py-4">
-                <router-link to="/view-profile" class="profile">
+                <router-link to="/edit-profile" class="profile">
                     <div class="profile-image">
                         <img src="default.png" alt="profile">
                     </div>
@@ -37,23 +37,23 @@
                 <router-link to="/dashboard" class="nav-link"><i class="fas fa-desktop"></i>Dashboard</router-link>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-users"></i>Team</a>
+                <a class="nav-link" href="#"><i class="fas fa-newspaper"></i>News</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#"><i class="fas fa-comments"></i>Chat</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><i class="far fa-clipboard" style="padding-left: 3px"></i>Projects</a>
+                <router-link to="/projects" class="nav-link"><i class="far fa-clipboard" style="padding-left: 3px"></i>Projects</router-link>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#"><i class="fas fa-tasks"></i>Tasks</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-file-alt"></i>Orders</a>
+                <a class="nav-link" href="#"><i class="fas fa-users"></i>Team</a>
             </li>
-            <li class="nav-item">
+        <!--    <li class="nav-item">
                 <a class="nav-link" href="#"><i class="fas fa-trash-alt"></i>Trash</a>
-            </li>
+            </li>-->
             <li class="nav-item d-lg-none d-md-block">
                 <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i>Logout</a>
             </li>
@@ -61,7 +61,7 @@
     </div>
     <div class="main-panel">
         <nav class="navbar navbar-expand-lg navbar-light pr-0 pl-4">
-            <a class="navbar-brand" href="#">Dashboard</a>
+            <h1 class="navbar-brand">{{title}}</h1>
             <button id="toggler" class="navbar-toggler collapsed" type="button" data-toggle="collapse"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="icon-bar top-bar"></span>
@@ -88,7 +88,7 @@
                             <i class="fas fa-user"></i>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <router-link to="/view-profile" class="dropdown-item">View profile</router-link>
+                            <router-link to="/edit-profile" class="dropdown-item">Edit profile</router-link>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Logout</a>
                         </div>
@@ -190,10 +190,10 @@
                                     <td>Dispatched Dispatched Dispatched</td>
                                     <td>20.08.2018</td>
                                     <td><a href="#"
-                                           class="btn btn-outline-success btn-sm">View order</a>
+                                           class="btn btn-success btn-sm">View order</a>
                                     </td>
                                     <td><a href="#"
-                                           class="btn btn-outline-danger btn-sm">Cancel</a></td>
+                                           class="btn btn-danger btn-sm">Cancel</a></td>
                                 </tr>
                                 <tr>
                                     <td>Alexander</td>
@@ -201,10 +201,10 @@
                                     <td>Dispatched Dispatched Dispatched</td>
                                     <td>20.08.2018</td>
                                     <td><a href="#"
-                                           class="btn btn-outline-success btn-sm">View order</a>
+                                           class="btn btn-success btn-sm">View order</a>
                                     </td>
                                     <td><a href="#"
-                                           class="btn btn-outline-danger btn-sm">Cancel</a></td>
+                                           class="btn btn-danger btn-sm">Cancel</a></td>
                                 </tr>
                                 <tr>
                                     <td>Alexander</td>
@@ -212,10 +212,10 @@
                                     <td>Dispatched Dispatched Dispatched</td>
                                     <td>20.08.2018</td>
                                     <td><a href="#"
-                                           class="btn btn-outline-success btn-sm">View order</a>
+                                           class="btn btn-success btn-sm">View order</a>
                                     </td>
                                     <td><a href="#"
-                                           class="btn btn-outline-danger btn-sm">Cancel</a></td>
+                                           class="btn btn-danger btn-sm">Cancel</a></td>
                                 </tr>
                                 <tr>
                                     <td>Alexander</td>
@@ -223,10 +223,10 @@
                                     <td>Dispatched Dispatched Dispatched</td>
                                     <td>20.08.2018</td>
                                     <td><a href="#"
-                                           class="btn btn-outline-success btn-sm">View order</a>
+                                           class="btn btn-success btn-sm">View order</a>
                                     </td>
                                     <td><a href="#"
-                                           class="btn btn-outline-danger btn-sm">Cancel</a></td>
+                                           class="btn btn-danger btn-sm">Cancel</a></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -238,7 +238,7 @@
     </section>
 </template>
 
-<template id="view-profile">
+<template id="edit-profile">
     <section class="view-user">
         <div class="row mt-4 bottom-margin">
             <div class="col-xl-8 padding-x edit-user order-2 order-sm-2 order-xl-1">
@@ -343,6 +343,103 @@
                                 </div>
                             </div>
                         </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="projects">
+    <section class="projects">
+        <div class="row bottom-margin">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body my-5">
+                        <div class="projects-cards-wrapper">
+                            <div class="project-card-wrapper">
+                                <div class="project-badge"></div>
+                                <a href="#" class="project-link">
+                                    <div class="project-card">
+                                        <div class="project-card-header">
+                                            <h6 class="project-card-title">Station Hostel</h6>
+                                        </div>
+                                        <div class="project-card-content">
+                                            <p>Albus silvas ducunt ad tumultumque. Itineris tramitem alter
+                                                equiso
+                                                est. Eheu, hydra! Vae, cotta! Voxs ridetis, tanquam bi-color
+                                                abaculus.</p>
+                                        </div>
+                                        <div class="project-card-footer d-flex align-items-center justify-content-between">
+                                            <p>21.09.2018</p>
+                                            <p>01.10.2018</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="project-card-wrapper project-card-wrapper-reverse">
+                                <div class="project-badge"></div>
+                                <a href="#" class="project-link">
+                                    <div class="project-card">
+                                        <div class="project-card-header">
+                                            <h6 class="project-card-title">Yablochkin</h6>
+                                        </div>
+                                        <div class="project-card-content">
+                                            <p>Albus silvas ducunt ad tumultumque. Itineris tramitem alter
+                                                equiso
+                                                est. Eheu, hydra! Vae, cotta! Voxs ridetis, tanquam bi-color
+                                                abaculus.</p>
+                                        </div>
+                                        <div class="project-card-footer d-flex align-items-center justify-content-between">
+                                            <p>21.09.2018</p>
+                                            <p>01.10.2018</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="projects-cards-wrapper">
+                            <div class="project-card-wrapper">
+                                <div class="project-badge"></div>
+                                <a href="#" class="project-link">
+                                    <div class="project-card">
+                                        <div class="project-card-header">
+                                            <h6 class="project-card-title">Prominvest</h6>
+                                        </div>
+                                        <div class="project-card-content">
+                                            <p>Albus silvas ducunt ad tumultumque. Itineris tramitem alter
+                                                equiso
+                                                est. Eheu, hydra! Vae, cotta! Voxs ridetis, tanquam bi-color
+                                                abaculus.</p>
+                                        </div>
+                                        <div class="project-card-footer d-flex align-items-center justify-content-between">
+                                            <p>21.09.2018</p>
+                                            <p>01.10.2018</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="project-card-wrapper project-card-wrapper-reverse">
+                                <div class="project-badge"></div>
+                                <a href="#" class="project-link">
+                                    <div class="project-card">
+                                        <div class="project-card-header">
+                                            <h6 class="project-card-title">Qoob Studio</h6>
+                                        </div>
+                                        <div class="project-card-content">
+                                            <p>Albus silvas ducunt ad tumultumque. Itineris tramitem alter
+                                                equiso
+                                                est. Eheu, hydra! Vae, cotta! Voxs ridetis, tanquam bi-color
+                                                abaculus.</p>
+                                        </div>
+                                        <div class="project-card-footer d-flex align-items-center justify-content-between">
+                                            <p>21.09.2018</p>
+                                            <p>01.10.2018</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
